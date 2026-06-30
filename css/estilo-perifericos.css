@@ -1,0 +1,190 @@
+:root{
+	--bg:#0F1115;
+	--surface:#171A21;
+	--surface-2:#1E222B;
+	--line:#2A2F3A;
+	--accent:#4FD8C4;
+	--accent-2:#F2B134;
+	--text:#E8EAED;
+	--muted:#8A92A6;
+}
+*{box-sizing:border-box;}
+body{
+	background:var(--bg);
+	color:var(--text);
+	font-family:'Inter',sans-serif;
+	line-height:1.5;
+}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;}
+.mono{font-family:'IBM Plex Mono',monospace;}
+
+.hero{
+	padding:90px 48px 70px;
+	max-width:1200px;
+	margin:0 auto;
+	display:grid;
+	grid-template-columns:1.1fr 0.9fr;
+	gap:40px;
+	align-items:center;
+}
+.eyebrow{
+	font-family:'IBM Plex Mono',monospace;
+	font-size:12px;
+	color:var(--accent-2);
+	letter-spacing:2px;
+	text-transform:uppercase;
+	margin-bottom:18px;
+	display:block;
+}
+.hero h1{
+	font-size:56px;
+	line-height:1.05;
+	font-weight:700;
+	letter-spacing:-1.5px;
+}
+.hero p{
+	margin-top:20px;
+	color:var(--muted);
+	font-size:17px;
+	max-width:440px;
+}
+.hero-actions{margin-top:32px;display:flex;gap:14px;}
+.btn{
+	padding:13px 26px;
+	border-radius:6px;
+	font-size:14px;
+	font-weight:500;
+	cursor:pointer;
+	border:1px solid transparent;
+}
+.btn-primary{background:var(--accent-2);color:#1A1206;}
+.btn-primary:hover{background:#FFC75A;}
+.btn-ghost{border-color:var(--line);color:var(--text);}
+.btn-ghost:hover{border-color:var(--accent-2);}
+
+.readout{
+	background:var(--surface);
+	border:1px solid var(--line);
+	border-radius:10px;
+	padding:24px;
+}
+.readout-title{
+	font-family:'IBM Plex Mono',monospace;
+	font-size:11px;
+	color:var(--muted);
+	letter-spacing:1.5px;
+	text-transform:uppercase;
+	margin-bottom:16px;
+	display:flex;
+	justify-content:space-between;
+}
+.readout-row{
+	display:flex;
+	justify-content:space-between;
+	padding:10px 0;
+	border-top:1px solid var(--line);
+	font-family:'IBM Plex Mono',monospace;
+	font-size:13px;
+}
+.readout-row:first-of-type{border-top:none;}
+.readout-row span:first-child{color:var(--muted);}
+
+section.products{
+	max-width:1200px;
+	margin:0 auto;
+	padding:40px 48px 100px;
+}
+.section-head{
+	display:flex;
+	justify-content:space-between;
+	align-items:baseline;
+	margin-bottom:30px;
+	border-bottom:1px solid var(--line);
+	padding-bottom:18px;
+}
+.section-head h2{font-size:24px;}
+.section-head .count{font-family:'IBM Plex Mono',monospace;color:var(--muted);font-size:13px;}
+
+.grid{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:22px;
+}
+.card{
+	background:var(--surface);
+	border:1px solid var(--line);
+	border-radius:10px;
+	overflow:hidden;
+	display:flex;
+	flex-direction:column;
+	transition:border-color .15s ease, transform .15s ease;
+}
+.card:hover{border-color:var(--accent-2);transform:translateY(-3px);}
+.card-visual{
+	height:150px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	font-size:13px;
+	font-family:'IBM Plex Mono',monospace;
+	color:var(--muted);
+	background:linear-gradient(135deg, var(--surface-2) 0%, var(--surface) 100%);
+	border-bottom:1px solid var(--line);
+}
+.card-body{padding:20px;flex:1;display:flex;flex-direction:column;}
+.card-tag{
+	font-family:'IBM Plex Mono',monospace;
+	font-size:11px;
+	color:var(--accent);
+	letter-spacing:1px;
+	text-transform:uppercase;
+	margin-bottom:6px;
+}
+.card h3{font-size:18px;margin-bottom:10px;}
+.specs{flex:1;margin-bottom:16px;}
+.specs li{
+	list-style:none;
+	font-family:'IBM Plex Mono',monospace;
+	font-size:12.5px;
+	color:var(--muted);
+	display:flex;
+	justify-content:space-between;
+	padding:5px 0;
+	border-top:1px solid var(--line);
+}
+.specs li:first-child{border-top:none;}
+.specs li span:last-child{color:var(--text);}
+.card-footer{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.price{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;}
+.price small{color:var(--muted);font-weight:500;font-size:12px;}
+.buy{
+	font-family:'IBM Plex Mono',monospace;
+	font-size:12px;
+	color:var(--accent-2);
+	border:1px solid var(--accent-2);
+	padding:7px 14px;
+	border-radius:6px;
+	cursor:pointer;
+	background:transparent;
+}
+.buy:hover{background:var(--accent-2);color:#1A1206;}
+
+footer{
+	border-top:1px solid var(--line);
+	padding:28px 48px;
+	display:flex;
+	justify-content:space-between;
+	color:var(--muted);
+	font-size:13px;
+}
+
+@media (max-width:900px){
+	.hero{grid-template-columns:1fr;padding:60px 24px;}
+	.grid{grid-template-columns:1fr;}
+	section.products{padding:30px 24px 70px;}
+	.hero h1{font-size:38px;}
+}
