@@ -1,5 +1,9 @@
 <html>
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/estilo-menu.css">
 	<link rel="stylesheet" type="text/css" href="css/estilo-inicio.css">
 	<title>Página Principal</title>
@@ -17,31 +21,51 @@
 		<li><a href="#">Contactenos</a></li>
 	</ul>
 
-	<div class="bienvenida">
-		<h1>Bienvenido a TecnoStore</h1>
-		<p>Tu tienda de tecnología: monitores, PCs y periféricos al mejor precio.</p>
+	<div class="hero">
+		<span class="eyebrow">// TecnoStore</span>
+		<h1>Todo lo que necesitás para tu setup, en un solo lugar.</h1>
+		<p>Monitores, PCs y periféricos con fichas técnicas reales. Elegí una categoría y encontrá lo que buscás.</p>
 	</div>
 
-	<div class="contenido">
-		<h2>¿Qué estás buscando?</h2>
-		<p>Elegí una categoría desde el menú o explorá nuestras opciones más populares.</p>
-
-		<div class="tarjetas">
-			<div class="tarjeta">
-				<h3>Monitores</h3>
-				<p>Pantallas para oficina, gaming y diseño.</p>
+	<section class="products">
+		<div class="section-head">
+			<h2>Categorías</h2>
+			<p>Explorá nuestro catálogo</p>
+		</div>
+		<div class="grid">
+			<div class="card">
+				<div class="card-visual"><img src="https://images.pexels.com/photos/7858742/pexels-photo-7858742.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Monitores"></div>
+				<div class="card-body">
+					<span class="card-tag">Oficina / Gaming / Diseño</span>
+					<h3>Monitores</h3>
+					<p>Pantallas IPS, VA y 4K para cada tipo de uso, desde oficina hasta edición profesional.</p>
+					<a href="Monitores/tienda-monitores.html" class="card-link">Ver monitores</a>
+				</div>
 			</div>
-			<div class="tarjeta">
-				<h3>PCs</h3>
-				<p>Equipos armados listos para usar.</p>
+			<div class="card">
+				<div class="card-visual"><img src="https://images.pexels.com/photos/30469971/pexels-photo-30469971.jpeg?auto=compress&cs=tinysrgb&w=800" alt="PCs de escritorio"></div>
+				<div class="card-body">
+					<span class="card-tag">Torres de escritorio</span>
+					<h3>PCs de escritorio</h3>
+					<p>Equipos armados y probados, desde uso diario hasta estaciones de gaming y creación de contenido.</p>
+					<a href="Monitores/tienda-monitores.html" class="card-link">Ver PCs</a>
+				</div>
 			</div>
-			<div class="tarjeta">
-				<h3>Periféricos</h3>
-				<p>Teclados, mouses, audio y más.</p>
+			<div class="card">
+				<div class="card-visual"><img src="https://images.pexels.com/photos/28993053/pexels-photo-28993053.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Periféricos"></div>
+				<div class="card-body">
+					<span class="card-tag">Teclados / Mouse / Audio</span>
+					<h3>Periféricos</h3>
+					<p>Teclados mecánicos, mouses gamer, headsets y accesorios de streaming.</p>
+					<a href="Perifericos/tienda-perifericos.html" class="card-link">Ver periféricos</a>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
-	<footer>© 2026 TecnoStore</footer>
+	<footer>
+		<span>© 2026 NEXO Tech</span>
+		<span class="mono">Garantía 24 meses · Envíos a todo el país</span>
+	</footer>
 </body>
 </html>
